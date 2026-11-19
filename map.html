@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>သိပ္ပံစူးစမ်းရှာဖွေရေး မြေပုံ — အခန်း (၆) မျိုးပွားခြင်း</title>
+    <meta
+      name="description"
+      content="Myanmar Grade 6 Science Textbook Chapter 6 (Reproduction, Pages 53-58) interactive Burmese educational adventure map, SVG Flower Lab, Fertilization Simulator, Concept Map, 3 Games, and 12-Question Quiz Arena."
+    />
+    <meta property="og:title" content="သိပ္ပံစူးစမ်းရှာဖွေရေး မြေပုံ — အခန်း (၆) မျိုးပွားခြင်း" />
+    <meta
+      property="og:description"
+      content="Myanmar Grade 6 Science Textbook Chapter 6 (Reproduction, Pages 53-58) interactive Burmese educational adventure map, SVG Flower Lab, Fertilization Simulator, Concept Map, 3 Games, and 12-Question Quiz Arena."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="hub">
+    <!-- Floating Corner HUD -->
+    <div class="hud-overlay">
+      <div class="hud-inner">
+        <div class="hud-group">
+          <a href="./index.html" class="hud-badge">← ကြိုဆိုစာမျက်နှာ</a>
+          <div class="hud-badge">ဆဋ္ဌမတန်း သိပ္ပံ · အခန်း (၆)</div>
+        </div>
+        <div class="hud-group">
+          <div class="hud-badge hud-badge--stars" aria-label="စုဆောင်းရရှိထားသော ကြယ်အရေအတွက်">
+            <span aria-hidden="true">⭐</span>
+            <span id="hud-star-count" class="hud-star-count">0</span>
+            <span>ကြယ်</span>
+          </div>
+          <button type="button" id="hud-sound-toggle" class="hud-badge hud-badge--sound" aria-pressed="false">
+            <span class="sound-icon" aria-hidden="true">🔊</span>
+            <span class="sound-label">အသံဖွင့်</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main class="page-shell">
+      <!-- Intro Hero (Textbook Page 53) -->
+      <section class="hero-card">
+        <span class="chapter-tag">ICT Show Project · ကျောင်းသုံးဖတ်စာအုပ် စာမျက်နှာ ၅၃ – ၅၈</span>
+        <h1>
+          အခန်း (၆) မျိုးပွားခြင်း
+          <span class="en-sub">Reproduction</span>
+        </h1>
+        <p class="hero-lead">
+          <strong>နိဒါန်း —</strong> မျိုးပွားခြင်းသည် သက်ရှိလက္ခဏာရပ်များအနက် အရေးကြီးသောလက္ခဏာရပ်တစ်ခု ဖြစ်သည်။
+          သက်ရှိများတွင် ယင်းတို့နှင့် မျိုးစိတ်တူသက်ရှိများကို ပွားများပေးနိုင်သော ဖြစ်စဉ်ကို
+          <strong>“မျိုးပွားခြင်း (Reproduction)”</strong> ဟုခေါ်သည်။ ဤသင်ခန်းစာတွင် အပင်နှင့်သတ္တဝါ ၂ မျိုးစလုံး၌
+          လိင်ရှိမျိုးပွားခြင်းနှင့် လိင်မဲ့မျိုးပွားခြင်းအကြောင်းအရာတို့ ပါဝင်သည်။
+        </p>
+
+        <div class="hero-meta-row">
+          <div class="progress-strip">
+            <span>စူးစမ်းလေ့လာမှု တိုးတက်မှု</span>
+            <div class="progress-bar-track" aria-hidden="true">
+              <div id="hub-progress-fill" class="progress-bar-fill"></div>
+            </div>
+            <span id="hub-progress-text" class="en-term">0 / 30 ခု</span>
+          </div>
+          <div class="hero-actions">
+            <button type="button" id="btn-reset-progress" class="btn btn-outline">မှတ်တမ်းအသစ်စမည်</button>
+            <a href="./grade6-ch6-reproduction.zip" download="grade6-ch6-reproduction.zip" class="btn btn-primary">ZIP ဖိုင်ဒေါင်းလုဒ်</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Adventure Archipelago SVG Map -->
+      <section class="section-block" aria-labelledby="map-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">အပိုင်း ၀၁ · စွန့်စားခန်းမြေပုံ</span>
+            <h2 id="map-heading">သိပ္ပံစူးစမ်းရှာဖွေရေး ကျွန်းစုမြေပုံ</h2>
+            <p class="section-sub">လေ့လာလိုသော ကျွန်းတစ်ခုခုကို နှိပ်၍ ခရီးစဉ်စတင်လိုက်ပါ။</p>
+          </div>
+        </div>
+
+        <div class="map-stage">
+          <svg
+            class="map-svg"
+            viewBox="0 0 1100 500"
+            role="img"
+            aria-label="အခန်း (၆) မျိုးပွားခြင်း ကျွန်း (၆) ကျွန်း အပြန်အလှန်ဆက်သွယ်ထားသော စွန့်စားခန်းမြေပုံ"
+          >
+            <defs>
+              <linearGradient id="seaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#DDF3FC" />
+                <stop offset="100%" stop-color="#C6EFE6" />
+              </linearGradient>
+              <filter id="islandShadow" x="-10%" y="-10%" width="120%" height="130%">
+                <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#1D3557" flood-opacity="0.14" />
+              </filter>
+            </defs>
+
+            <rect width="1100" height="500" rx="18" fill="url(#seaGrad)" />
+            <path d="M50 90 Q90 75 130 90 T210 90" fill="none" stroke="#9AD4EC" stroke-width="3" stroke-linecap="round" />
+            <path d="M840 70 Q880 55 920 70 T1000 70" fill="none" stroke="#9AD4EC" stroke-width="3" stroke-linecap="round" />
+            <path d="M460 445 Q500 430 540 445 T620 445" fill="none" stroke="#8AD7C6" stroke-width="3" stroke-linecap="round" />
+
+            <path
+              d="M 185 185 Q 315 110 435 165 T 690 155 Q 820 150 905 245 Q 820 355 560 365 Q 350 375 185 185"
+              fill="none"
+              stroke="#1D3557"
+              stroke-width="4"
+              stroke-dasharray="10 10"
+              opacity="0.32"
+            />
+
+            <a href="./living-things.html" class="map-island-link" aria-label="၆-၁ သက်ရှိများ မျိုးပွားခြင်း ကျွန်းသို့သွားမည်">
+              <g filter="url(#islandShadow)">
+                <ellipse cx="185" cy="195" rx="125" ry="76" fill="#FFE6A3" stroke="#E8B948" stroke-width="4" />
+                <ellipse cx="185" cy="182" rx="108" ry="58" fill="#FFF7DF" />
+                <text x="185" y="164" text-anchor="middle" font-size="34">🧬</text>
+                <text x="185" y="198" text-anchor="middle" fill="#1D3557" font-size="18" font-weight="800" font-family="Noto Sans Myanmar, sans-serif">
+                  ၆-၁ သက်ရှိများ
+                </text>
+                <text x="185" y="222" text-anchor="middle" fill="#455A75" font-size="13" font-weight="700" font-family="Noto Sans Myanmar, sans-serif">
+                  စာမျက်နှာ ၅၃–၅၄
+                </text>
+              </g>
+            </a>
+
+            <a href="./plants.html" class="map-island-link" aria-label="၆-၂ အပင်များ မျိုးပွားခြင်း ကျွန်းသို့သွားမည်">
+              <g filter="url(#islandShadow)">
+                <ellipse cx="470" cy="145" rx="135" ry="78" fill="#A9F0D8" stroke="#06D6A0" stroke-width="4" />
+                <ellipse cx="470" cy="133" rx="116" ry="60" fill="#E9FBF5" />
+                <text x="470" y="114" text-anchor="middle" font-size="34">🌺</text>
+                <text x="470" y="148" text-anchor="middle" fill="#1D3557" font-size="18" font-weight="800" font-family="Noto Sans Myanmar, sans-serif">
+                  ၆-၂ အပင်များ
+                </text>
+                <text x="470" y="172" text-anchor="middle" fill="#046B50" font-size="13" font-weight="700" font-family="Noto Sans Myanmar, sans-serif">
+                  ပန်းပွင့်ဓာတ်ခွဲခန်း • စာ ၅၄–၅၆
+                </text>
+              </g>
+            </a>
+
+            <a href="./animals.html" class="map-island-link" aria-label="၆-၃ သတ္တဝါများ မျိုးပွားခြင်း ကျွန်းသို့သွားမည်">
+              <g filter="url(#islandShadow)">
+                <ellipse cx="830" cy="160" rx="138" ry="80" fill="#B6E4F5" stroke="#118AB2" stroke-width="4" />
+                <ellipse cx="830" cy="147" rx="118" ry="62" fill="#EDF8FC" />
+                <text x="830" y="128" text-anchor="middle" font-size="34">🐸</text>
+                <text x="830" y="162" text-anchor="middle" fill="#1D3557" font-size="18" font-weight="800" font-family="Noto Sans Myanmar, sans-serif">
+                  ၆-၃ သတ္တဝါများ
+                </text>
+                <text x="830" y="186" text-anchor="middle" fill="#0B5D7A" font-size="13" font-weight="700" font-family="Noto Sans Myanmar, sans-serif">
+                  သန္ဓေအောင်ခြင်း • စာ ၅၆–၅၈
+                </text>
+              </g>
+            </a>
+
+            <a href="./review.html" class="map-island-link" aria-label="အခန်း (၆) သုံးသပ်ချက် မြေပုံသို့သွားမည်">
+              <g filter="url(#islandShadow)">
+                <ellipse cx="220" cy="370" rx="130" ry="72" fill="#FFD1D1" stroke="#FF6B6B" stroke-width="4" />
+                <ellipse cx="220" cy="358" rx="112" ry="54" fill="#FFF3F3" />
+                <text x="220" y="340" text-anchor="middle" font-size="32">🧠</text>
+                <text x="220" y="372" text-anchor="middle" fill="#1D3557" font-size="18" font-weight="800" font-family="Noto Sans Myanmar, sans-serif">
+                  အခန်းသုံးသပ်ချက်
+                </text>
+                <text x="220" y="396" text-anchor="middle" fill="#9E2424" font-size="13" font-weight="700" font-family="Noto Sans Myanmar, sans-serif">
+                  Concept Map • စာ ၅၈
+                </text>
+              </g>
+            </a>
+
+            <a href="./games.html" class="map-island-link" aria-label="သိပ္ပံလေ့ကျင့်ခန်း ဂိမ်းကစားကွင်းသို့သွားမည်">
+              <g filter="url(#islandShadow)">
+                <ellipse cx="555" cy="375" rx="135" ry="74" fill="#D4C7FF" stroke="#7B61FF" stroke-width="4" />
+                <ellipse cx="555" cy="363" rx="116" ry="56" fill="#F4F0FF" />
+                <text x="555" y="344" text-anchor="middle" font-size="32">🎮</text>
+                <text x="555" y="376" text-anchor="middle" fill="#1D3557" font-size="18" font-weight="800" font-family="Noto Sans Myanmar, sans-serif">
+                  လေ့ကျင့်ခန်းဂိမ်းများ
+                </text>
+                <text x="555" y="400" text-anchor="middle" fill="#4B32B3" font-size="13" font-weight="700" font-family="Noto Sans Myanmar, sans-serif">
+                  ဂိမ်း (၃) မျိုး ကစားမည်
+                </text>
+              </g>
+            </a>
+
+            <a href="./quiz.html" class="map-island-link" aria-label="ဉာဏ်စမ်းပြိုင်ပွဲကွင်းသို့သွားမည်">
+              <g filter="url(#islandShadow)">
+                <ellipse cx="890" cy="368" rx="135" ry="74" fill="#FFD166" stroke="#E0A526" stroke-width="4" />
+                <ellipse cx="890" cy="356" rx="116" ry="56" fill="#FFF8E6" />
+                <text x="890" y="338" text-anchor="middle" font-size="32">🏆</text>
+                <text x="890" y="370" text-anchor="middle" fill="#1D3557" font-size="18" font-weight="800" font-family="Noto Sans Myanmar, sans-serif">
+                  ဉာဏ်စမ်းပြိုင်ပွဲကွင်း
+                </text>
+                <text x="890" y="394" text-anchor="middle" fill="#7D5300" font-size="13" font-weight="700" font-family="Noto Sans Myanmar, sans-serif">
+                  မေးခွန်း ၁၂ ခု ဖြေဆိုမည်
+                </text>
+              </g>
+            </a>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Responsive Island Portal Cards -->
+      <section class="section-block" aria-labelledby="portals-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">အပိုင်း ၀၂ · သင်ခန်းစာများ</span>
+            <h2 id="portals-heading">သင်ခန်းစာ ကျွန်းစခန်းများ</h2>
+            <p class="section-sub">ကတ်တစ်ခုချင်းစီကို နှိပ်ပြီး ဖတ်စာအုပ်ပုံများ၊ ဂရပ်များနှင့် လက်တွေ့စမ်းသပ်ခန်းများကို လေ့လာပါ။</p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <a href="./living-things.html" class="portal-card">
+            <div class="portal-card-head">
+              <div class="portal-card-title-group">
+                <div class="portal-icon-box" style="background:var(--amber-soft);" aria-hidden="true">🧬</div>
+                <div>
+                  <div class="portal-page-ref">ကျွန်း (၁) · စာမျက်နှာ ၅၃ – ၅၄</div>
+                  <h3>၆-၁ သက်ရှိများ မျိုးပွားခြင်း</h3>
+                </div>
+              </div>
+            </div>
+            <p class="muted-text">
+              ပုံ (၆-၁) မူရင်းဓာတ်ပုံများ၊ စာမျက်နှာ (၅၃) နှိုင်းယှဉ်ဇယားနှင့် စာမျက်နှာ (၅၄) လေ့ကျင့်ခန်းများ။
+            </p>
+            <span class="portal-cta"><span>ကျွန်း (၁) သို့ ဝင်ရောက်မည်</span><span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="./plants.html" class="portal-card">
+            <div class="portal-card-head">
+              <div class="portal-card-title-group">
+                <div class="portal-icon-box" style="background:var(--teal-soft);" aria-hidden="true">🌺</div>
+                <div>
+                  <div class="portal-page-ref">ကျွန်း (၂) · စာမျက်နှာ ၅၄ – ၅၆</div>
+                  <h3>၆-၂ အပင်များ မျိုးပွားခြင်း</h3>
+                </div>
+              </div>
+            </div>
+            <p class="muted-text">
+              ပုံ (၆-၂) ပန်းပွင့်ဓာတ်ခွဲခန်း၊ ပုံ (၆-၃) ဖန်းပင်စပိုး၊ ပုံ (၆-၄) လှန်ကြည့်ကတ်များနှင့် လေ့ကျင့်ခန်းများ။
+            </p>
+            <span class="portal-cta"><span>ကျွန်း (၂) သို့ ဝင်ရောက်မည်</span><span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="./animals.html" class="portal-card">
+            <div class="portal-card-head">
+              <div class="portal-card-title-group">
+                <div class="portal-icon-box" style="background:var(--ocean-soft);" aria-hidden="true">🐸</div>
+                <div>
+                  <div class="portal-page-ref">ကျွန်း (၃) · စာမျက်နှာ ၅၆ – ၅၈</div>
+                  <h3>၆-၃ သတ္တဝါများ မျိုးပွားခြင်း</h3>
+                </div>
+              </div>
+            </div>
+            <p class="muted-text">
+              ပုံ (၆-၅ မှ ၆-၈) မူရင်းပုံများ၊ ဖားနှင့်လူ သန္ဓေအောင်ပုံ အဆင့်ဆင့်နှင့် စမ်းသပ်ခန်း။
+            </p>
+            <span class="portal-cta"><span>ကျွန်း (၃) သို့ ဝင်ရောက်မည်</span><span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="./review.html" class="portal-card">
+            <div class="portal-card-head">
+              <div class="portal-card-title-group">
+                <div class="portal-icon-box" style="background:var(--coral-soft);" aria-hidden="true">🧠</div>
+                <div>
+                  <div class="portal-page-ref">ကျွန်း (၄) · စာမျက်နှာ ၅၈</div>
+                  <h3>အခန်း (၆) သုံးသပ်ချက် မြေပုံ</h3>
+                </div>
+              </div>
+            </div>
+            <p class="muted-text">
+              စာမျက်နှာ (၅၈) ခြုံငုံသုံးသပ်ချက် မူရင်းဂရပ်ပုံ၊ အပြန်အလှန်ဖြည့်စွက်ဇယားနှင့် ဂရပ်များ။
+            </p>
+            <span class="portal-cta"><span>ကျွန်း (၄) သို့ ဝင်ရောက်မည်</span><span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="./quiz.html" class="portal-card">
+            <div class="portal-card-head">
+              <div class="portal-card-title-group">
+                <div class="portal-icon-box" style="background:var(--amber-soft);" aria-hidden="true">🏆</div>
+                <div>
+                  <div class="portal-page-ref">ကျွန်း (၅) · အကဲဖြတ်စစ်ဆေးခြင်း</div>
+                  <h3>ဉာဏ်စမ်းပြိုင်ပွဲကွင်း</h3>
+                </div>
+              </div>
+            </div>
+            <p class="muted-text">
+              အခန်း (၆) ဆိုင်ရာ မေးခွန်း (၁၂) ခု (၅ ပုဒ် / ၈ ပုဒ် / ၁၂ ပုဒ် မုဒ်များ) ကို ဖြေဆိုပါ။
+            </p>
+            <span class="portal-cta"><span>ကျွန်း (၅) သို့ ဝင်ရောက်မည်</span><span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="./games.html" class="portal-card">
+            <div class="portal-card-head">
+              <div class="portal-card-title-group">
+                <div class="portal-icon-box" style="background:#EFEAFF;" aria-hidden="true">🎮</div>
+                <div>
+                  <div class="portal-page-ref">ကျွန်း (၆) · လေ့ကျင့်ခန်း ဂိမ်း (၃) မျိုး</div>
+                  <h3>သိပ္ပံလေ့ကျင့်ခန်း ဂိမ်းကစားကွင်း</h3>
+                </div>
+              </div>
+            </div>
+            <p class="muted-text">
+              မျိုးပွားနည်း အမြန်ခွဲခြားဂိမ်း၊ မှတ်ဉာဏ်အတွဲညှိဂိမ်းနှင့် ဘဝစက်ဝန်း အစီအစဉ်စီဂိမ်း (၃) မျိုး။
+            </p>
+            <span class="portal-cta"><span>ကျွန်း (၆) သို့ ဝင်ရောက်မည်</span><span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Interactive Chapter 6 Data Graphs -->
+      <section class="section-block" aria-labelledby="graphs-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">အပိုင်း ၀၃ · ခွဲခြမ်းစိတ်ဖြာမှု</span>
+            <h2 id="graphs-heading">အခန်း (၆) သက်ရှိမျိုးပွားပုံ ခွဲခြမ်းစိတ်ဖြာမှု ဂရပ်များ</h2>
+            <p class="section-sub">စာမျက်နှာ ၅၃ – ၅၈ တွင် ပါဝင်သော သက်ရှိနမူနာ (၂၅) မျိုး၏ မျိုးပွားနည်းအချိုးအစား ဂရပ်များ</p>
+          </div>
+        </div>
+
+        <div class="chart-grid">
+          <div class="chart-card">
+            <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px;">
+              <h3>မျိုးပွားနည်းအလိုက် နမူနာအရေအတွက် ဘားဂရပ်</h3>
+              <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                <button type="button" class="btn btn-outline is-active" data-chart-mode="all">အားလုံး</button>
+                <button type="button" class="btn btn-outline" data-chart-mode="plants">အပင်များ</button>
+                <button type="button" class="btn btn-outline" data-chart-mode="animals">သတ္တဝါများ</button>
+              </div>
+            </div>
+            <div id="repro-bar-chart" class="bar-chart" aria-live="polite"></div>
+          </div>
+
+          <div class="chart-card">
+            <h3>အပင်နှင့် သတ္တဝါ မျိုးပွားနည်း အချိုးအစားဂရပ်</h3>
+            <div class="donut-layout">
+              <svg class="donut-svg" viewBox="0 0 180 180" role="img" aria-label="အခန်း ၆ မျိုးပွားနည်း အချိုးအစား စက်ဝိုင်းဂရပ်">
+                <circle cx="90" cy="90" r="62" fill="none" stroke="#EDF4FA" stroke-width="26" />
+                <circle cx="90" cy="90" r="62" fill="none" stroke="#FFD166" stroke-width="26" stroke-dasharray="140.2 389.56" transform="rotate(-90 90 90)" />
+                <circle cx="90" cy="90" r="62" fill="none" stroke="#FF6B6B" stroke-width="26" stroke-dasharray="93.5 389.56" stroke-dashoffset="-140.2" transform="rotate(-90 90 90)" />
+                <circle cx="90" cy="90" r="62" fill="none" stroke="#06D6A0" stroke-width="26" stroke-dasharray="62.3 389.56" stroke-dashoffset="-233.7" transform="rotate(-90 90 90)" />
+                <circle cx="90" cy="90" r="62" fill="none" stroke="#118AB2" stroke-width="26" stroke-dasharray="62.3 389.56" stroke-dashoffset="-296.0" transform="rotate(-90 90 90)" />
+                <circle cx="90" cy="90" r="62" fill="none" stroke="#1D3557" stroke-width="26" stroke-dasharray="31.2 389.56" stroke-dashoffset="-358.3" transform="rotate(-90 90 90)" />
+                <text x="90" y="86" text-anchor="middle" font-size="22" font-weight="800" fill="#1D3557" font-family="Plus Jakarta Sans, sans-serif">25</text>
+                <text x="90" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#455A75" font-family="Noto Sans Myanmar, sans-serif">နမူနာစုစုပေါင်း</text>
+              </svg>
+
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <span><span class="legend-swatch" style="background:#FFD166;"></span> ပင်ပိုင်းမျိုးပွားအပင်</span>
+                  <span class="en-term">36% (9)</span>
+                </div>
+                <div class="legend-item">
+                  <span><span class="legend-swatch" style="background:#FF6B6B;"></span> လိင်ရှိသတ္တဝါ</span>
+                  <span class="en-term">24% (6)</span>
+                </div>
+                <div class="legend-item">
+                  <span><span class="legend-swatch" style="background:#06D6A0;"></span> လိင်ရှိအပင်</span>
+                  <span class="en-term">16% (4)</span>
+                </div>
+                <div class="legend-item">
+                  <span><span class="legend-swatch" style="background:#118AB2;"></span> လိင်မဲ့သတ္တဝါ</span>
+                  <span class="en-term">16% (4)</span>
+                </div>
+                <div class="legend-item">
+                  <span><span class="legend-swatch" style="background:#1D3557;"></span> စပိုးထွက်အပင်</span>
+                  <span class="en-term">8% (2)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Original Textbook Pages Gallery (Pages 53-58) -->
+      <section class="section-block" aria-labelledby="tb-pages-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">အပိုင်း ၀၄ · ဖတ်စာအုပ်ပုံရိပ်များ</span>
+            <h2 id="tb-pages-heading">ကျောင်းသုံးဖတ်စာအုပ် မူရင်းစာမျက်နှာများ (စာ ၅၃ – ၅၈)</h2>
+            <p class="section-sub">စာမျက်နှာတစ်ခုချင်းစီကို နှိပ်၍ အကြီးချဲ့ဖတ်ရှုနိုင်ပါသည်။</p>
+          </div>
+        </div>
+
+        <div class="pages-thumb-grid">
+          <button type="button" class="page-thumb-btn" data-lightbox-src="./images/ch6/page_53.png" data-lightbox-title="စာမျက်နှာ ၅၃ — အခန်း (၆) နိဒါန်းနှင့် ပုံ (၆-၁)" data-discovery-id="tb_p53">
+            <img src="./images/ch6/page_53.png" alt="ကျောင်းသုံးဖတ်စာအုပ် စာမျက်နှာ ၅၃" loading="lazy" />
+            <span>စာမျက်နှာ ၅၃</span>
+          </button>
+          <button type="button" class="page-thumb-btn" data-lightbox-src="./images/ch6/page_54.png" data-lightbox-title="စာမျက်နှာ ၅၄ — လေ့ကျင့်ခန်းနှင့် ပုံ (၆-၂) ပန်းပွင့်" data-discovery-id="tb_p54">
+            <img src="./images/ch6/page_54.png" alt="ကျောင်းသုံးဖတ်စာအုပ် စာမျက်နှာ ၅၄" loading="lazy" />
+            <span>စာမျက်နှာ ၅၄</span>
+          </button>
+          <button type="button" class="page-thumb-btn" data-lightbox-src="./images/ch6/page_55.png" data-lightbox-title="စာမျက်နှာ ၅၅ — ပုံ (၆-၃) ဖန်းပင်နှင့် ပုံ (၆-၄)" data-discovery-id="tb_p55">
+            <img src="./images/ch6/page_55.png" alt="ကျောင်းသုံးဖတ်စာအုပ် စာမျက်နှာ ၅၅" loading="lazy" />
+            <span>စာမျက်နှာ ၅၅</span>
+          </button>
+          <button type="button" class="page-thumb-btn" data-lightbox-src="./images/ch6/page_56.png" data-lightbox-title="စာမျက်နှာ ၅၆ — အပင်လေ့ကျင့်ခန်းနှင့် ပုံ (၆-၅)" data-discovery-id="tb_p56">
+            <img src="./images/ch6/page_56.png" alt="ကျောင်းသုံးဖတ်စာအုပ် စာမျက်နှာ ၅၆" loading="lazy" />
+            <span>စာမျက်နှာ ၅၆</span>
+          </button>
+          <button type="button" class="page-thumb-btn" data-lightbox-src="./images/ch6/page_57.png" data-lightbox-title="စာမျက်နှာ ၅၇ — ပုံ (၆-၆)၊ (၆-၇) နှင့် (၆-၈)" data-discovery-id="tb_p57">
+            <img src="./images/ch6/page_57.png" alt="ကျောင်းသုံးဖတ်စာအုပ် စာမျက်နှာ ၅၇" loading="lazy" />
+            <span>စာမျက်နှာ ၅၇</span>
+          </button>
+          <button type="button" class="page-thumb-btn" data-lightbox-src="./images/ch6/page_58.png" data-lightbox-title="စာမျက်နှာ ၅၈ — အဓိကအချက်များနှင့် ပြန်လည်သုံးသပ်ခြင်း" data-discovery-id="tb_p58">
+            <img src="./images/ch6/page_58.png" alt="ကျောင်းသုံးဖတ်စာအုပ် စာမျက်နှာ ၅၈" loading="lazy" />
+            <span>စာမျက်နှာ ၅၈</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Full Uploaded Grade 6 Science Textbook Reference (Chapters 1 to 11 + PDF Viewer) -->
+      <section class="section-block" aria-labelledby="full-pdf-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">အပိုင်း ၀၅ · သင်ရိုးမာတိကာနှင့် PDF</span>
+            <h2 id="full-pdf-heading">ဆဋ္ဌမတန်း သိပ္ပံကျောင်းသုံးဖတ်စာအုပ် အပြည့်အစုံ (အခန်း ၁ – ၁၁)</h2>
+            <p class="section-sub">တင်သွင်းထားသော PDF ဖတ်စာအုပ် (<span class="en-term">G 6 Science TB.pdf</span>, စာမျက်နှာ ၁၆၀) မှ သင်ရိုးမာတိကာအကျဉ်းချုပ်</p>
+          </div>
+          <div class="hero-actions">
+            <button type="button" id="btn-toggle-pdf" class="btn btn-teal">ဖတ်စာအုပ် PDF တစ်အုပ်လုံး ဖွင့်ဖတ်မည်</button>
+            <a href="./assets/aistudio/G_6_Science_TB_d5536dac.pdf" download="Grade6_Science_Textbook.pdf" class="btn btn-outline">↓ PDF ဖိုင်ဒေါင်းလုဒ်</a>
+          </div>
+        </div>
+
+        <div id="pdf-viewer-wrap" class="mt-2" hidden>
+          <iframe
+            class="pdf-frame"
+            src="./assets/aistudio/G_6_Science_TB_d5536dac.pdf#page=63"
+            title="ဆဋ္ဌမတန်း သိပ္ပံ ကျောင်းသုံးဖတ်စာအုပ် PDF"
+          ></iframe>
+        </div>
+
+        <div class="toc-grid mt-2">
+          <div class="toc-item"><span class="toc-ch-num">အခန်း (၁)</span><strong>သိပ္ပံ၏သဘောသဘာဝ</strong><span class="muted-text" style="font-size:0.86rem;">သိပ္ပံနည်းပညာ၊ စူးစမ်းစမ်းသပ်နည်းနှင့် ကောင်းကျိုး/ဆိုးကျိုး</span></div>
+          <div class="toc-item"><span class="toc-ch-num">အခန်း (၂)</span><strong>ဒြပ်</strong><span class="muted-text" style="font-size:0.86rem;">အခဲ၊ အရည်၊ အငွေ့ အခြေအနေ ၃ မျိုးနှင့် အမှုန်ဖွဲ့စည်းပုံ</span></div>
+          <div class="toc-item"><span class="toc-ch-num">အခန်း (၃)</span><strong>အား</strong><span class="muted-text" style="font-size:0.86rem;">အားအမျိုးမျိုး၊ ဒြပ်ထုနှင့် အလေးချိန် ခြားနားချက်</span></div>
+          <div class="toc-item"><span class="toc-ch-num">အခန်း (၄)</span><strong>သက်ရှိအမျိုးမျိုး</strong><span class="muted-text" style="font-size:0.86rem;">ပန်းပွင့်/ပန်းမပွင့်အပင်၊ ကျောရိုးရှိ/မဲ့ သတ္တဝါများ ခွဲခြားခြင်း</span></div>
+          <div class="toc-item"><span class="toc-ch-num">အခန်း (၅)</span><strong>ဆဲလ်နှင့် ဆဲလ်ဖွဲ့စည်းတည်ဆောက်ပုံ</strong><span class="muted-text" style="font-size:0.86rem;">အဏုကြည့်ကိရိယာ အသုံးပြုပုံနှင့် အပင်/သတ္တဝါဆဲလ်</span></div>
+          <div class="toc-item toc-item--active"><span class="toc-ch-num">အခန်း (၆) · ယခုသင်ခန်းစာ</span><strong>မျိုးပွားခြင်း (Reproduction)</strong><span class="muted-text" style="font-size:0.86rem;">စာမျက်နှာ ၅၃–၅၈ · အပင်နှင့် သတ္တဝါ မျိုးပွားနည်းအမျိုးမျိုး</span></div>
+          <div class="toc-item"><span class="toc-ch-num">အခန်း (၇)</span><strong>ကမ္ဘာဂြိုဟ်</strong><span class="muted-text" style="font-size:0.86rem;">မိမိဝင်ရိုးပေါ်လည်ပတ်ခြင်း၊ နေကိုလှည့်ပတ်ခြင်းနှင့် ဇီဝထု</span></div>
+          <div class="toc-item"><span class="toc-ch-num">အခန်း (၈)</span><strong>ဂေဟစနစ်</strong><span class="muted-text" style="font-size:0.86rem;">ဂေဟစနစ်အမျိုးမျိုးနှင့် အပင်၊ သတ္တဝါ ဆက်စပ်မှု</span></div>
+          <div class="toc-item"><span class="toc-ch-num">အခန်း (၉)</span><strong>ဒြပ်စင်၊ ဒြပ်ပေါင်းနှင့် ဒြပ်နှောများ</strong><span class="muted-text" style="font-size:0.86rem;">အက်တမ်သင်္ကေတများ၊ မော်လီကျူး ၂ မျိုးနှင့် ခွဲခြားနည်းများ</span></div>
+          <div class="toc-item"><span class="toc-ch-num">အခန်း (၁၀)</span><strong>စွမ်းအင်အမျိုးမျိုး</strong><span class="muted-text" style="font-size:0.86rem;">အသံ၊ အလင်း၊ အပူ၊ လျှပ်စစ်နှင့် သံလိုက်စွမ်းအင်များ</span></div>
+          <div class="toc-item"><span class="toc-ch-num">အခန်း (၁၁)</span><strong>နေအဖွဲ့အစည်း</strong><span class="muted-text" style="font-size:0.86rem;">နေအဖွဲ့အစည်း ဖွဲ့စည်းပုံနှင့် ဂြိုဟ်ကြီး ၈ လုံး နှိုင်းယှဉ်ချက်</span></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating Bottom Dock -->
+    <div class="bottom-dock-wrap">
+      <nav class="bottom-dock" aria-label="ကျွန်းများပြောင်းရန်">
+        <a href="./map.html" class="dock-item is-active" aria-current="page">
+          <span class="dock-icon" aria-hidden="true">🗺️</span><span>မြေပုံ</span>
+        </a>
+        <a href="./living-things.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🧬</span><span>၆-၁ သက်ရှိများ</span>
+        </a>
+        <a href="./plants.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🌺</span><span>၆-၂ အပင်များ</span>
+        </a>
+        <a href="./animals.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🐸</span><span>၆-၃ သတ္တဝါများ</span>
+        </a>
+        <a href="./review.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🧠</span><span>သုံးသပ်ချက်</span>
+        </a>
+        <a href="./games.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🎮</span><span>ဂိမ်းများ</span>
+        </a>
+        <a href="./quiz.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🏆</span><span>ဉာဏ်စမ်း</span>
+        </a>
+      </nav>
+    </div>
+
+    <script defer src="./app.js"></script>
+  </body>
+</html>

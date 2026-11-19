@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>အခန်း (၆) ပြန်လည်သုံးသပ်ခြင်း — Concept Map</title>
+    <meta name="description" content="Grade 6 Science Chapter 6 Review Concept Map (Page 58), original textbook tree graph, and interactive data charts." />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="review">
+    <!-- Floating Corner HUD -->
+    <div class="hud-overlay">
+      <div class="hud-inner">
+        <div class="hud-group">
+          <a href="./map.html" class="hud-badge">← ပင်မမြေပုံ</a>
+          <div class="hud-badge">ကျွန်း (၄) · အခန်းသုံးသပ်ချက်</div>
+        </div>
+        <div class="hud-group">
+          <div class="hud-badge hud-badge--stars">
+            <span aria-hidden="true">⭐</span>
+            <span id="hud-star-count" class="hud-star-count">0</span>
+            <span>ကြယ်</span>
+          </div>
+          <button type="button" id="hud-sound-toggle" class="hud-badge hud-badge--sound" aria-pressed="false">
+            <span class="sound-icon" aria-hidden="true">🔊</span>
+            <span class="sound-label">အသံဖွင့်</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main class="page-shell">
+      <section class="hero-card">
+        <span class="chapter-tag">စာမျက်နှာ ၅၈ · အခန်း (၆) ကို ပြန်လည်သုံးသပ်ခြင်း</span>
+        <h1>
+          အခန်း (၆) သုံးသပ်ချက် မြေပုံ နှင့် ဂရပ်များ
+          <span class="en-sub">Concept Map &amp; Graphs</span>
+        </h1>
+        <p class="hero-lead">
+          ကျောင်းသုံးဖတ်စာအုပ် စာမျက်နှာ (၅၈) ရှိ အခန်း (၆) မျိုးပွားခြင်း ခြုံငုံသုံးသပ်ချက် မူရင်းမြေပုံဂရပ်နှင့်
+          အပြန်အလှန်ဖြည့်စွက် ဇယားကွက်လပ်များကို လေ့ကျင့်စစ်ဆေးပါ။
+        </p>
+      </section>
+
+      <section class="section-block" aria-labelledby="cmap-heading">
+        <div class="cmap-controls">
+          <div>
+            <h2 id="cmap-heading">အပြန်အလှန်ဖြည့်စွက်ရန် ဇယားကွက်</h2>
+            <p id="cmap-status" class="section-sub" style="font-weight:700; color:var(--ocean);">ဖြည့်စွက်ပြီးစီးမှု: 0 / 10</p>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <button type="button" id="btn-mode-reveal" class="btn btn-outline is-active">နှိပ်၍ဖော်ကြည့်မည်</button>
+            <button type="button" id="btn-mode-wordbank" class="btn btn-outline">စကားလုံးဘဏ်ဖြင့် ဖြည့်မည်</button>
+            <button type="button" id="btn-cmap-reveal-all" class="btn btn-teal">အားလုံးဖော်မည်</button>
+            <button type="button" id="btn-cmap-reset" class="btn btn-outline">↺ ပြန်စမည်</button>
+          </div>
+        </div>
+
+        <div id="word-bank" class="word-bank" hidden>
+          <strong>စကားလုံးဘဏ် — အောက်ပါစကားလုံးတစ်ခုကို နှိပ်၍ ရွေးပြီး မြေပုံရှိ ကိုက်ညီသော ကွက်လပ်တွင် ထည့်ပါ</strong>
+          <div class="word-bank-items">
+            <button type="button" class="word-token" data-word="အစေ့များ">အစေ့များ</button>
+            <button type="button" class="word-token" data-word="လိင်မဲ့မျိုးပွားခြင်း">လိင်မဲ့မျိုးပွားခြင်း</button>
+            <button type="button" class="word-token" data-word="အရွက်ရှိ စပိုးများ">အရွက်ရှိ စပိုးများ</button>
+            <button type="button" class="word-token" data-word="ပင်ပိုင်းမျိုးပွားခြင်း">ပင်ပိုင်းမျိုးပွားခြင်း</button>
+            <button type="button" class="word-token" data-word="အမြစ်၊ အရွက်နှင့် မြေအောက်ပင်စည်">အမြစ်၊ အရွက်နှင့် မြေအောက်ပင်စည်</button>
+            <button type="button" class="word-token" data-word="အတွင်းသန္ဓေအောင်">အတွင်းသန္ဓေအောင်</button>
+            <button type="button" class="word-token" data-word="အပြင်သန္ဓေအောင်">အပြင်သန္ဓေအောင်</button>
+            <button type="button" class="word-token" data-word="ဖူးထွက်ခြင်း">ဖူးထွက်ခြင်း</button>
+            <button type="button" class="word-token" data-word="စုံကွဲပွားခြင်း (နှစ်ပိုင်းသိမ်ပြတ်ခြင်း)">စုံကွဲပွားခြင်း (နှစ်ပိုင်းသိမ်ပြတ်ခြင်း)</button>
+            <button type="button" class="word-token" data-word="အပိုင်းပိုင်းပြတ်ခြင်း">အပိုင်းပိုင်းပြတ်ခြင်း</button>
+          </div>
+        </div>
+
+        <div class="cmap-tree">
+          <div class="cmap-root">မျိုးပွားခြင်း (Reproduction)</div>
+
+          <div class="cmap-branches">
+            <div class="cmap-branch-box">
+              <div class="cmap-branch-title cmap-branch-title--plants">🌿 အပင်များ မျိုးပွားခြင်း</div>
+
+              <div class="cmap-subgroups">
+                <div class="cmap-row">
+                  <div class="cmap-node">လိင်ရှိမျိုးပွားခြင်း</div>
+                  <div class="cmap-node">ပန်းပွင့်သော အပင်များ</div>
+                  <button type="button" class="cmap-blank" data-answer="အစေ့များ" data-placeholder="ကွက်လပ် (၁) နှိပ်ပါ" aria-pressed="false">
+                    ကွက်လပ် (၁) နှိပ်ပါ
+                  </button>
+                </div>
+
+                <div class="cmap-row">
+                  <button type="button" class="cmap-blank" data-answer="လိင်မဲ့မျိုးပွားခြင်း" data-placeholder="ကွက်လပ် (၂) နှိပ်ပါ" aria-pressed="false">
+                    ကွက်လပ် (၂) နှိပ်ပါ
+                  </button>
+                  <div class="cmap-node">အပင်ရှိ စပိုးများ</div>
+                  <button type="button" class="cmap-blank" data-answer="အရွက်ရှိ စပိုးများ" data-placeholder="ကွက်လပ် (၃) နှိပ်ပါ" aria-pressed="false">
+                    ကွက်လပ် (၃) နှိပ်ပါ
+                  </button>
+                </div>
+
+                <div class="cmap-row">
+                  <button type="button" class="cmap-blank" data-answer="ပင်ပိုင်းမျိုးပွားခြင်း" data-placeholder="ကွက်လပ် (၄) နှိပ်ပါ" aria-pressed="false">
+                    ကွက်လပ် (၄) နှိပ်ပါ
+                  </button>
+                  <div class="cmap-node">အပင်၏ အစိတ်အပိုင်းများ</div>
+                  <button type="button" class="cmap-blank" data-answer="အမြစ်၊ အရွက်နှင့် မြေအောက်ပင်စည်" data-placeholder="ကွက်လပ် (၅) နှိပ်ပါ" aria-pressed="false">
+                    ကွက်လပ် (၅) နှိပ်ပါ
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cmap-branch-box">
+              <div class="cmap-branch-title cmap-branch-title--animals">🐾 သတ္တဝါများ မျိုးပွားခြင်း</div>
+
+              <div class="cmap-subgroups">
+                <div class="cmap-row--split">
+                  <div class="cmap-node" style="background:var(--coral-soft); border-color:var(--coral);">လိင်ရှိမျိုးပွားခြင်း</div>
+                  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap:8px;">
+                    <div style="display:flex; flex-direction:column; gap:6px;">
+                      <button type="button" class="cmap-blank" data-answer="အတွင်းသန္ဓေအောင်" data-placeholder="ကွက်လပ် (၆) နှိပ်ပါ" aria-pressed="false">
+                        ကွက်လပ် (၆) နှိပ်ပါ
+                      </button>
+                      <div class="cmap-node">မိခင်၏ ကိုယ်တွင်း၌ သန္ဓေသားဘဝ ဖြတ်ကျော်</div>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:6px;">
+                      <button type="button" class="cmap-blank" data-answer="အပြင်သန္ဓေအောင်" data-placeholder="ကွက်လပ် (၇) နှိပ်ပါ" aria-pressed="false">
+                        ကွက်လပ် (၇) နှိပ်ပါ
+                      </button>
+                      <div class="cmap-node">မိခင်၏ ကိုယ်ပြင်ပတွင် သန္ဓေသားဘဝ ဖြတ်ကျော်</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cmap-row--split">
+                  <div class="cmap-node" style="background:var(--teal-soft); border-color:var(--teal);">လိင်မဲ့မျိုးပွားခြင်း</div>
+                  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap:8px;">
+                    <button type="button" class="cmap-blank" data-answer="ဖူးထွက်ခြင်း" data-placeholder="ကွက်လပ် (၈) နှိပ်ပါ" aria-pressed="false">
+                      ကွက်လပ် (၈) နှိပ်ပါ
+                    </button>
+                    <button type="button" class="cmap-blank" data-answer="စုံကွဲပွားခြင်း (နှစ်ပိုင်းသိမ်ပြတ်ခြင်း)" data-placeholder="ကွက်လပ် (၉) နှိပ်ပါ" aria-pressed="false">
+                      ကွက်လပ် (၉) နှိပ်ပါ
+                    </button>
+                    <button type="button" class="cmap-blank" data-answer="အပိုင်းပိုင်းပြတ်ခြင်း" data-placeholder="ကွက်လပ် (၁၀) နှိပ်ပါ" aria-pressed="false">
+                      ကွက်လပ် (၁၀) နှိပ်ပါ
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Original Textbook Concept Map Graph & Interactive Data Graph -->
+      <section class="section-block" aria-labelledby="review-graphs-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">စာမျက်နှာ ၅၈ · နှိုင်းယှဉ်ဂရပ်များ</span>
+            <h2 id="review-graphs-heading">ဖတ်စာအုပ် မူရင်းသုံးသပ်ချက် ဂရပ် နှင့် ခွဲခြမ်းစိတ်ဖြာမှု ဂရပ်</h2>
+            <p class="section-sub">စာမျက်နှာ (၅၈) မူရင်း Concept Map ပုံနှင့် မျိုးပွားနည်းအချိုးအစား ဘားဂရပ်တို့ကို နှိုင်းယှဉ်လေ့လာပါ။</p>
+          </div>
+        </div>
+
+        <div class="chart-grid">
+          <div class="figure-card">
+            <div class="figure-frame">
+              <img src="./images/ch6/p58-concept-map.png" alt="စာမျက်နှာ ၅၈ အခန်း (၆) ကို ပြန်လည်သုံးသပ်ခြင်း မူရင်းမြေပုံ" loading="lazy" />
+            </div>
+            <p class="figure-caption">ဖတ်စာအုပ် စာမျက်နှာ (၅၈) မူရင်း Concept Map ဂရပ်</p>
+            <button
+              type="button"
+              class="btn btn-outline"
+              style="align-self:center;"
+              data-lightbox-src="./images/ch6/p58-concept-map.png"
+              data-lightbox-title="စာမျက်နှာ ၅၈ — အခန်း (၆) ပြန်လည်သုံးသပ်ခြင်း မြေပုံ"
+            >
+              အကြီးချဲ့ကြည့်မည်
+            </button>
+          </div>
+
+          <div class="chart-card">
+            <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px;">
+              <h3>မျိုးပွားနည်းအလိုက် ဘားဂရပ်</h3>
+              <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                <button type="button" class="btn btn-outline is-active" data-chart-mode="all">အားလုံး</button>
+                <button type="button" class="btn btn-outline" data-chart-mode="plants">အပင်များ</button>
+                <button type="button" class="btn btn-outline" data-chart-mode="animals">သတ္တဝါများ</button>
+              </div>
+            </div>
+            <div id="repro-bar-chart" class="bar-chart" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating Bottom Dock -->
+    <div class="bottom-dock-wrap">
+      <nav class="bottom-dock" aria-label="ကျွန်းများပြောင်းရန်">
+        <a href="./map.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🗺️</span><span>မြေပုံ</span>
+        </a>
+        <a href="./living-things.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🧬</span><span>၆-၁ သက်ရှိများ</span>
+        </a>
+        <a href="./plants.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🌺</span><span>၆-၂ အပင်များ</span>
+        </a>
+        <a href="./animals.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🐸</span><span>၆-၃ သတ္တဝါများ</span>
+        </a>
+        <a href="./review.html" class="dock-item is-active" aria-current="page">
+          <span class="dock-icon" aria-hidden="true">🧠</span><span>သုံးသပ်ချက်</span>
+        </a>
+        <a href="./games.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🎮</span><span>ဂိမ်းများ</span>
+        </a>
+        <a href="./quiz.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🏆</span><span>ဉာဏ်စမ်း</span>
+        </a>
+      </nav>
+    </div>
+
+    <script defer src="./app.js"></script>
+  </body>
+</html>

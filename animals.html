@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>၆-၃ သတ္တဝါများ မျိုးပွားခြင်း — အခန်း (၆)</title>
+    <meta name="description" content="Grade 6 Science Chapter 6 Section 6-3 Animal Reproduction, Figures 6-5 to 6-8 textbook diagrams, Fertilization Simulator, and Page 58 Exercises." />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="animals">
+    <!-- Floating Corner HUD -->
+    <div class="hud-overlay">
+      <div class="hud-inner">
+        <div class="hud-group">
+          <a href="./map.html" class="hud-badge">← ပင်မမြေပုံ</a>
+          <div class="hud-badge">ကျွန်း (၃) · ၆-၃ သတ္တဝါများ</div>
+        </div>
+        <div class="hud-group">
+          <div class="hud-badge hud-badge--stars">
+            <span aria-hidden="true">⭐</span>
+            <span id="hud-star-count" class="hud-star-count">0</span>
+            <span>ကြယ်</span>
+          </div>
+          <button type="button" id="hud-sound-toggle" class="hud-badge hud-badge--sound" aria-pressed="false">
+            <span class="sound-icon" aria-hidden="true">🔊</span>
+            <span class="sound-label">အသံဖွင့်</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main class="page-shell">
+      <section class="hero-card">
+        <span class="chapter-tag">စာမျက်နှာ ၅၆ – ၅၈ · အပိုင်း (၆-၃)</span>
+        <h1>
+          ၆-၃ သတ္တဝါများ၏ မျိုးပွားခြင်း
+          <span class="en-sub">Reproduction of Animals</span>
+        </h1>
+        <p class="hero-lead">
+          သတ္တဝါများတွင် <strong>လိင်မဲ့မျိုးပွားခြင်း</strong> နှင့် <strong>လိင်ရှိမျိုးပွားခြင်း</strong> ဟူ၍ နှစ်မျိုးခွဲခြားနိုင်သည်။
+          လိင်မဲ့မျိုးပွားခြင်းဆိုသည်မှာ အထီး၊ အမ ဟူ၍မရှိဘဲ တစ်ကောင်တည်းမှ ပွားများခြင်းဖြစ်ပြီး၊ လိင်ရှိမျိုးပွားခြင်းဆိုသည်မှာ
+          အမမျိုးဥ <span class="en-inline-muted">(egg)</span> နှင့် အဖိုသုက်ကောင် <span class="en-inline-muted">(sperm)</span> တို့ ပေါင်းစပ်သန္ဓေအောင်ပြီး
+          သန္ဓေအောင်ဥ <span class="en-inline-muted">(zygote)</span> ဖြစ်ပေါ်ခြင်းကို ခေါ်သည်။
+        </p>
+      </section>
+
+      <!-- Interactive Fertilization Simulator + Figure 6-8 Stage Diagrams -->
+      <section class="section-block" aria-labelledby="fert-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">စာမျက်နှာ ၅၇ · စမ်းသပ်ခန်း</span>
+            <h2 id="fert-heading">သန္ဓေအောင်ခြင်း လက်တွေ့စမ်းသပ်ခန်း နှင့် ပုံ (၆-၈)</h2>
+            <p class="section-sub">
+              ၆-၃-၂ လုပ်ငန်း (၂) — ပေးထားသော သက်ရှိများသည် မည်သည့် သန္ဓေအောင်ခြင်းအဆင့်များ ရှိသနည်း။
+            </p>
+          </div>
+        </div>
+
+        <div class="fert-sim-box">
+          <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px;">
+            <div class="classify-choices" role="group" aria-label="သန္ဓေအောင်ခြင်း အမျိုးအစားရွေးရန်">
+              <button type="button" class="btn btn-outline is-active" data-fert-mode="external">
+                ပြင်ပသန္ဓေအောင်ခြင်း (ငါး၊ ဖား)
+              </button>
+              <button type="button" class="btn btn-outline" data-fert-mode="internal">
+                အတွင်းသန္ဓေအောင်ခြင်း (လူ၊ မြင်း)
+              </button>
+            </div>
+            <div id="fert-env-label" class="type-label type-label--asexual">
+              ရေထဲ / ခန္ဓာကိုယ်ပြင်ပ (ဥပမာ - ငါး၊ ဖား၊ ရေပုတ်သင်)
+            </div>
+          </div>
+
+          <div id="fert-stage" class="fert-stage fert-stage--external">
+            <div class="gamete-track">
+              <div class="gamete-actor gamete-actor--sperm">
+                <svg width="78" height="44" viewBox="0 0 78 44" aria-hidden="true">
+                  <path d="M8 22 Q20 12 30 22 T48 22" fill="none" stroke="#1D3557" stroke-width="3.5" stroke-linecap="round" />
+                  <ellipse cx="58" cy="22" rx="13" ry="9" fill="#118AB2" stroke="#1D3557" stroke-width="2.5" />
+                  <circle cx="60" cy="22" r="4" fill="#FFFFFF" />
+                </svg>
+                <span class="gamete-label">အဖိုသုက်ကောင် (Sperm)</span>
+              </div>
+
+              <div class="gamete-actor gamete-actor--egg">
+                <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+                  <circle cx="32" cy="32" r="26" fill="#FFD166" stroke="#B87D00" stroke-width="3" />
+                  <circle cx="32" cy="32" r="11" fill="#FF6B6B" />
+                </svg>
+                <span class="gamete-label">အမမျိုးဥ (Egg)</span>
+              </div>
+
+              <div class="zygote-result">
+                <svg width="82" height="82" viewBox="0 0 82 82" aria-hidden="true">
+                  <circle cx="41" cy="41" r="34" fill="#06D6A0" stroke="#046B50" stroke-width="3.5" />
+                  <circle cx="33" cy="38" r="10" fill="#FF6B6B" />
+                  <circle cx="49" cy="42" r="10" fill="#118AB2" />
+                </svg>
+                <span class="gamete-label" style="background:#FFF8E6; border:1.5px solid #E0A526;">
+                  သန္ဓေအောင်ဥ (Zygote)
+                </span>
+                <span id="fert-zygote-sub" class="gamete-label">သန္ဓေအောင်ဥ → ဖားလောင်း → ဖား / ငါး</span>
+              </div>
+            </div>
+          </div>
+
+          <p id="fert-caption" style="font-weight:700;">
+            အမမျိုးဥနှင့် အဖိုသုက်ကောင်တို့သည် ခန္ဓာကိုယ်ပြင်ပ (ရေထဲ) တွင် တွေ့ဆုံရန် အသင့်ဖြစ်နေပါသည်။
+          </p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <button type="button" id="btn-run-fert" class="btn btn-primary">▶ သန္ဓေအောင်ခြင်း စတင်မည်</button>
+            <button type="button" id="btn-reset-fert" class="btn btn-outline">↺ ပြန်လည်စတင်မည်</button>
+          </div>
+        </div>
+
+        <!-- Real Textbook Figure 6-8 Diagrams -->
+        <div class="card-grid--two mt-2">
+          <div class="figure-card">
+            <div class="figure-frame">
+              <img src="./images/ch6/fig6-8-frog.png" alt="ပုံ (၆-၈) ဖား၏ ပြင်ပသန္ဓေအောင်ခြင်း အဆင့်ဆင့်" loading="lazy" />
+            </div>
+            <p class="figure-caption">ပုံ (၆-၈ က) ဖား — ပြင်ပသန္ဓေအောင်ခြင်း (ဥ → သန္ဓေအောင်ဥ → ဖားလောင်း → ဖား)</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-frame">
+              <img src="./images/ch6/fig6-8-human.png" alt="ပုံ (၆-၈) လူ၏ အတွင်းသန္ဓေအောင်ခြင်း အဆင့်ဆင့်" loading="lazy" />
+            </div>
+            <p class="figure-caption">ပုံ (၆-၈ ခ) လူ — အတွင်းသန္ဓေအောင်ခြင်း (အမမျိုးဥ + အဖိုသုက်ကောင် → သန္ဓေသား → ကလေး)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filterable Animal Cards with Authentic Textbook Photos/Diagrams -->
+      <section class="section-block" aria-labelledby="animals-grid-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">ပုံ (၆-၅) မှ (၆-၇) မူရင်းပုံများ</span>
+            <h2 id="animals-grid-heading">သတ္တဝါများ၏ မျိုးပွားပုံ</h2>
+            <p class="section-sub">
+              လုပ်ငန်း (၁) — ပေးထားသောသက်ရှိများတွင် မည်သည့်သက်ရှိသည် လိင်မဲ့/လိင်ရှိမျိုးပွားနည်းဖြင့် မျိုးပွားသနည်း စစ်ထုတ်ကြည့်ရှုပါ။
+            </p>
+          </div>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="မျိုးပွားနည်းအလိုက် စစ်ထုတ်ရန်">
+          <button type="button" class="btn btn-outline is-active" data-animal-filter="all">အားလုံး (၈ မျိုး)</button>
+          <button type="button" class="btn btn-outline" data-animal-filter="asexual">လိင်မဲ့မျိုးပွားခြင်း (၄ မျိုး)</button>
+          <button type="button" class="btn btn-outline" data-animal-filter="sexual">လိင်ရှိမျိုးပွားခြင်း (၄ မျိုး)</button>
+        </div>
+
+        <div class="card-grid">
+          <article class="specimen-card animal-card" data-repro-type="asexual">
+            <div class="specimen-visual">
+              <img class="specimen-photo" src="./images/ch6/fig6-5-amoeba.png" alt="ပုံ ၆-၅ အမီးဗား" loading="lazy" />
+            </div>
+            <span class="type-label type-label--asexual">လိင်မဲ့ (စုံကွဲပွားခြင်း)</span>
+            <h3>အမီးဗား <span class="en-inline-muted">(Amoeba)</span></h3>
+            <p class="muted-text">ဆဲလ်တစ်ခုတည်းသတ္တဝါဖြစ်ပြီး နှစ်ပိုင်းသိမ်ပြတ်ကာ မျိုးပွားသည်။ (ပုံ ၆-၅)</p>
+            <button type="button" class="btn btn-outline" data-reveal-target="ani-amoeba" data-discovery-id="ani_amoeba" data-discovery-msg="အမီးဗား စုံကွဲပွားပုံ" aria-expanded="false">
+              အသေးစိတ်ကြည့်မည်
+            </button>
+            <div id="ani-amoeba" class="reveal-box" hidden>
+              မိခင်အမီးဗားဆဲလ်တစ်ခုသည် အလယ်မှ နှစ်ခြမ်းကွဲထွက်၍ <strong>အမီးဗားအသစ် (၂) ကောင်</strong> ဖြစ်ပေါ်လာသည်။
+            </div>
+          </article>
+
+          <article class="specimen-card animal-card" data-repro-type="asexual">
+            <div class="specimen-visual">
+              <img class="specimen-photo specimen-photo--contain" src="./images/ch6/fig6-6-paramecium.png" alt="ပုံ ၆-၆ ပါရာမီစီယမ် စုံကွဲပွားခြင်း" loading="lazy" />
+            </div>
+            <span class="type-label type-label--asexual">လိင်မဲ့ (စုံကွဲပွားခြင်း)</span>
+            <h3>ပါရာမီစီယမ် <span class="en-inline-muted">(Paramecium)</span></h3>
+            <p class="muted-text">နှစ်ပိုင်းသိမ်ပြတ်ခြင်း (စုံကွဲပွားခြင်း) ဖြင့် မျိုးပွားသည်။ (ပုံ ၆-၆ နှင့် ၆-၇)</p>
+            <button type="button" class="btn btn-outline" data-reveal-target="ani-para" data-discovery-id="ani_para" data-discovery-msg="ပါရာမီစီယမ် စုံကွဲပွားပုံ" aria-expanded="false">
+              အသေးစိတ်ကြည့်မည်
+            </button>
+            <div id="ani-para" class="reveal-box" hidden>
+              ဖိနပ်ပုံသဏ္ဌာန် ဆဲလ်တစ်ခုတည်းသတ္တဝါဖြစ်ပြီး ကန့်လန့်ဖြတ် နှစ်ပိုင်းသိမ်ပြတ်ခြင်းဖြင့် အကောင်သစ် (၂) ကောင် ဖြစ်လာသည်။
+            </div>
+          </article>
+
+          <article class="specimen-card animal-card" data-repro-type="asexual">
+            <div class="specimen-visual">
+              <img class="specimen-photo specimen-photo--contain" src="./images/ch6/fig6-6-hydra.png" alt="ပုံ ၆-၆ ဟိုက်ဒရာ ဖူးထွက်ခြင်း" loading="lazy" />
+            </div>
+            <span class="type-label type-label--asexual">လိင်မဲ့ (ဖူးထွက်ခြင်း)</span>
+            <h3>ဟိုက်ဒရာ <span class="en-inline-muted">(Hydra)</span></h3>
+            <p class="muted-text">ကိုယ်ခန္ဓာဘေးမှ အဖူး (Bud) ထွက်၍ မျိုးပွားသည်။ (ပုံ ၆-၆)</p>
+            <button type="button" class="btn btn-outline" data-reveal-target="ani-hydra" data-discovery-id="ani_hydra" data-discovery-msg="ဟိုက်ဒရာ ဖူးထွက်မျိုးပွားပုံ" aria-expanded="false">
+              အသေးစိတ်ကြည့်မည်
+            </button>
+            <div id="ani-hydra" class="reveal-box" hidden>
+              မိခင်ဟိုက်ဒရာ၏ ခန္ဓာကိုယ်မှ အဖူးသစ်ကြီးထွားလာပြီး ရင့်မှည့်သောအခါ ခွာထွက်၍ သီးခြားအကောင်သစ် ဖြစ်လာသည်။
+            </div>
+          </article>
+
+          <article class="specimen-card animal-card" data-repro-type="asexual">
+            <div class="specimen-visual">
+              <img class="specimen-photo specimen-photo--contain" src="./images/ch6/fig6-7-planaria.png" alt="ပုံ ၆-၇ ပလန်နေးရီးယား အပိုင်းပိုင်းပြတ်ခြင်း" loading="lazy" />
+            </div>
+            <span class="type-label type-label--asexual">လိင်မဲ့ (အပိုင်းပိုင်းပြတ်ခြင်း)</span>
+            <h3>ပလန်နေးရီးယား <span class="en-inline-muted">(Planaria)</span></h3>
+            <p class="muted-text">ကိုယ်ခန္ဓာ အပိုင်းပိုင်းပြတ်တောက်ရာမှ အကောင်သစ်ပြန်ဖြစ်လာသည်။ (ပုံ ၆-၇)</p>
+            <button type="button" class="btn btn-outline" data-reveal-target="ani-planaria" data-discovery-id="ani_planaria" data-discovery-msg="ပလန်နေးရီးယား အပိုင်းပိုင်းပြတ်ခြင်း" aria-expanded="false">
+              အသေးစိတ်ကြည့်မည်
+            </button>
+            <div id="ani-planaria" class="reveal-box" hidden>
+              ပလန်နေးရီးယား၏ ခန္ဓာကိုယ် ပြတ်တောက်သွားသော အပိုင်းတစ်ခုစီတိုင်းသည် လိုအပ်သောအစိတ်အပိုင်းများ ပြန်လည်ကြီးထွား၍ အကောင်သစ်များ ဖြစ်လာသည်။
+            </div>
+          </article>
+
+          <article class="specimen-card animal-card" data-repro-type="sexual">
+            <div class="specimen-visual">
+              <img class="specimen-photo specimen-photo--contain" src="./images/ch6/fig6-7-fish.png" alt="ပုံ ၆-၇ ငါး" loading="lazy" />
+            </div>
+            <span class="type-label type-label--sexual">လိင်ရှိ (ပြင်ပသန္ဓေအောင်)</span>
+            <h3>ငါး <span class="en-inline-muted">(Fish)</span></h3>
+            <p class="muted-text">ရေထဲတွင် အမမျိုးဥနှင့် အဖိုသုက်ကောင် တွေ့ဆုံသန္ဓေအောင်သည်။ (ပုံ ၆-၇)</p>
+            <button type="button" class="btn btn-outline" data-reveal-target="ani-fish" data-discovery-id="ani_fish" data-discovery-msg="ငါး ပြင်ပသန္ဓေအောင်ပုံ" aria-expanded="false">
+              အသေးစိတ်ကြည့်မည်
+            </button>
+            <div id="ani-fish" class="reveal-box" hidden>
+              ငါးမဥချထားသော ဥများပေါ်သို့ ငါးထီးက သုက်ကောင်များ ထုတ်လွှတ်ပေးပြီး ရေထဲ၌ <strong>ပြင်ပသန္ဓေအောင်ခြင်း</strong> ဖြစ်ပေါ်သည်။
+            </div>
+          </article>
+
+          <article class="specimen-card animal-card" data-repro-type="sexual">
+            <div class="specimen-visual">
+              <img class="specimen-photo specimen-photo--contain" src="./images/ch6/fig6-8-frog.png" alt="ပုံ ၆-၈ ဖား" loading="lazy" />
+            </div>
+            <span class="type-label type-label--sexual">လိင်ရှိ (ပြင်ပသန္ဓေအောင်)</span>
+            <h3>ဖား <span class="en-inline-muted">(Frog)</span></h3>
+            <p class="muted-text">ဥ → သန္ဓေအောင်ဥ → ဖားလောင်း → ဖား အဆင့်ဆင့်ကြီးထွားသည်။ (ပုံ ၆-၈)</p>
+            <button type="button" class="btn btn-outline" data-reveal-target="ani-frog" data-discovery-id="ani_frog" data-discovery-msg="ဖား ပြင်ပသန္ဓေအောင်ပုံ" aria-expanded="false">
+              အသေးစိတ်ကြည့်မည်
+            </button>
+            <div id="ani-frog" class="reveal-box" hidden>
+              ရေထဲတွင် ပြင်ပသန္ဓေအောင်၍ ဖြစ်လာသော <strong>သန္ဓေအောင်ဥ</strong> မှ <strong>ဖားလောင်း (Tadpole)</strong> ပေါက်ဖွားပြီးနောက် အရွယ်ရောက်ဖား ဖြစ်လာသည်။
+            </div>
+          </article>
+
+          <article class="specimen-card animal-card" data-repro-type="sexual">
+            <div class="specimen-visual">
+              <img class="specimen-photo specimen-photo--contain" src="./images/ch6/fig6-5-human.png" alt="ပုံ ၆-၅ လူ" loading="lazy" />
+            </div>
+            <span class="type-label type-label--sexual">လိင်ရှိ (အတွင်းသန္ဓေအောင်)</span>
+            <h3>လူ <span class="en-inline-muted">(Human)</span></h3>
+            <p class="muted-text">မိခင်ခန္ဓာကိုယ်အတွင်း သန္ဓေအောင်၍ သန္ဓေသားဘဝ ဖြတ်ကျော်သည်။ (ပုံ ၆-၅, ၆-၈)</p>
+            <button type="button" class="btn btn-outline" data-reveal-target="ani-human" data-discovery-id="ani_human" data-discovery-msg="လူ အတွင်းသန္ဓေအောင်ပုံ" aria-expanded="false">
+              အသေးစိတ်ကြည့်မည်
+            </button>
+            <div id="ani-human" class="reveal-box" hidden>
+              အမမျိုးဥနှင့် အဖိုသုက်ကောင်တို့သည် မိခင်ကိုယ်တွင်း၌ <strong>အတွင်းသန္ဓေအောင်ခြင်း</strong> ဖြစ်ပေါ်ပြီး သန္ဓေသားမှ ကလေးငယ်မွေးဖွားလာသည်။
+            </div>
+          </article>
+
+          <article class="specimen-card animal-card" data-repro-type="sexual">
+            <div class="specimen-visual">
+              <img class="specimen-photo" src="./images/ch6/fig6-5-horse.png" alt="ပုံ ၆-၅ မြင်း" loading="lazy" />
+            </div>
+            <span class="type-label type-label--sexual">လိင်ရှိ (အတွင်းသန္ဓေအောင်)</span>
+            <h3>မြင်း <span class="en-inline-muted">(Horse)</span></h3>
+            <p class="muted-text">မြင်းထီးနှင့် မြင်းမတို့မှ သန္ဓေအောင်၍ မြင်းလေးမွေးဖွားသည်။ (ပုံ ၆-၅)</p>
+            <button type="button" class="btn btn-outline" data-reveal-target="ani-horse" data-discovery-id="ani_horse" data-discovery-msg="မြင်း အတွင်းသန္ဓေအောင်ပုံ" aria-expanded="false">
+              အသေးစိတ်ကြည့်မည်
+            </button>
+            <div id="ani-horse" class="reveal-box" hidden>
+              မိခင်၏ ခန္ဓာကိုယ်အတွင်း၌ သန္ဓေအောင်ပြီး သန္ဓေသားဘဝ ဖွံ့ဖြိုးကြီးထွားကာ မြင်းလေးအဖြစ် မွေးဖွားပေးသည်။
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Key Concepts & ALL 4 Page 58 Exercises -->
+      <section class="section-block" aria-labelledby="ex58-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">စာမျက်နှာ ၅၇ – ၅၈ · လေ့ကျင့်ရန်</span>
+            <h2 id="ex58-heading">အဓိကအချက်များနှင့် လေ့ကျင့်ခန်းများ</h2>
+            <p class="section-sub">ပြင်ပသန္ဓေအောင်ခြင်းနှင့် အတွင်းသန္ဓေအောင်ခြင်းတို့ကို ပြန်လည်စစ်ဆေးပါ။</p>
+          </div>
+        </div>
+
+        <div class="card-grid--two">
+          <div class="surface-card surface-card--top-ocean">
+            <h3>ပြင်ပသန္ဓေအောင်ခြင်း <span class="en-inline-muted">(External Fertilization)</span></h3>
+            <p style="margin-bottom:0;">
+              သန္ဓေအောင်ခြင်း ၂ မျိုးရှိသည်။ <strong>ပြင်ပသန္ဓေအောင်ခြင်း —</strong> အမမျိုးဥနှင့် အဖိုသုက်တို့သည် ခန္ဓာကိုယ်ပြင်ပတွင် တွေ့ဆုံပြီး သန္ဓေအောင်ကြသည်။<br />
+              <strong>ဥပမာ —</strong> ငါး၊ ဖား၊ ရေပုတ်သင်
+            </p>
+          </div>
+          <div class="surface-card surface-card--top-coral">
+            <h3>အတွင်းသန္ဓေအောင်ခြင်း <span class="en-inline-muted">(Internal Fertilization)</span></h3>
+            <p style="margin-bottom:0;">
+              <strong>အတွင်းသန္ဓေအောင်ခြင်း —</strong> အမမျိုးဥနှင့် အဖိုသုက်တို့သည် မိခင်၏ ခန္ဓာကိုယ်အတွင်းတွင် တွေ့ဆုံပြီး သန္ဓေအောင်ကြသည်။<br />
+              <strong>ဥပမာ —</strong> လူ၊ မြင်း
+            </p>
+          </div>
+        </div>
+
+        <div class="exercise-list mt-2">
+          <div class="exercise-card">
+            <h3>၁။ သတ္တဝါများတွင်တွေ့ရသော လိင်မဲ့မျိုးပွားခြင်းများကို ဥပမာဖြင့် ဖော်ပြပါ။</h3>
+            <button type="button" class="btn btn-outline" data-reveal-target="ex58-q1" data-discovery-id="ex58_q1" data-discovery-msg="စာမျက်နှာ ၅၈ လေ့ကျင့်ခန်း (၁)" aria-expanded="false">
+              အဖြေကြည့်မည်
+            </button>
+            <div id="ex58-q1" class="reveal-box" hidden>
+              ၁။ <strong>ဖူးထွက်ခြင်း (Budding) —</strong> ဟိုက်ဒရာ<br />
+              ၂။ <strong>စုံကွဲပွားခြင်း / နှစ်ပိုင်းသိမ်ပြတ်ခြင်း (Binary Fission) —</strong> အမီးဗား၊ ပါရာမီစီယမ်<br />
+              ၃။ <strong>အပိုင်းပိုင်းပြတ်ခြင်း (Fragmentation) —</strong> ပလန်နေးရီးယား
+            </div>
+          </div>
+
+          <div class="exercise-card">
+            <h3>၂။ လိင်ရှိမျိုးပွားခြင်းတွင် သန္ဓေအောင်ခြင်း ဘယ်နှမျိုး ရှိသနည်း။</h3>
+            <button type="button" class="btn btn-outline" data-reveal-target="ex58-q2" data-discovery-id="ex58_q2" data-discovery-msg="စာမျက်နှာ ၅၈ လေ့ကျင့်ခန်း (၂)" aria-expanded="false">
+              အဖြေကြည့်မည်
+            </button>
+            <div id="ex58-q2" class="reveal-box" hidden>
+              သန္ဓေအောင်ခြင်း <strong>၂ မျိုး</strong> ရှိပါသည်။ ၎င်းတို့မှာ <strong>(၁) ပြင်ပသန္ဓေအောင်ခြင်း</strong> နှင့် <strong>(၂) အတွင်းသန္ဓေအောင်ခြင်း</strong> တို့ဖြစ်သည်။
+            </div>
+          </div>
+
+          <div class="exercise-card">
+            <h3>၃။ လိင်ရှိမျိုးပွားခြင်းတွင် အတွင်းသန္ဓေအောင်ခြင်းဖြင့် မျိုးပွားသောသတ္တဝါ ၃ မျိုး ကို ဖော်ပြပါ။</h3>
+            <button type="button" class="btn btn-outline" data-reveal-target="ex58-q3" data-discovery-id="ex58_q3" data-discovery-msg="စာမျက်နှာ ၅၈ လေ့ကျင့်ခန်း (၃)" aria-expanded="false">
+              အဖြေကြည့်မည်
+            </button>
+            <div id="ex58-q3" class="reveal-box" hidden>
+              လူ၊ မြင်း၊ ပန်ဒါဝက်ဝံ (သို့မဟုတ် ခွေး၊ ကြောင်၊ နွား)
+            </div>
+          </div>
+
+          <div class="exercise-card">
+            <h3>၄။ လိင်ရှိမျိုးပွားခြင်းတွင် ပြင်ပသန္ဓေအောင်ခြင်းဖြင့် မျိုးပွားသောသတ္တဝါ ၃ မျိုး ကို ဖော်ပြပါ။</h3>
+            <button type="button" class="btn btn-outline" data-reveal-target="ex58-q4" data-discovery-id="ex58_q4" data-discovery-msg="စာမျက်နှာ ၅၈ လေ့ကျင့်ခန်း (၄)" aria-expanded="false">
+              အဖြေကြည့်မည်
+            </button>
+            <div id="ex58-q4" class="reveal-box" hidden>
+              ငါး၊ ဖား၊ ရေပုတ်သင်
+            </div>
+          </div>
+
+          <div class="exercise-card">
+            <h3>အပြန်အလှန် စစ်ဆေးခြင်း — မှန်ကန်သော သန္ဓေအောင်နည်းကို ရွေးချယ်ပါ</h3>
+            <div class="classify-row" data-answer="external" data-discovery-id="ex58_frog">
+              <div><strong>၁။ ငါး၊ ဖား နှင့် ရေပုတ်သင်</strong></div>
+              <div class="classify-choices">
+                <button type="button" class="choice-chip" data-choice="external">ပြင်ပသန္ဓေအောင်ခြင်း</button>
+                <button type="button" class="choice-chip" data-choice="internal">အတွင်းသန္ဓေအောင်ခြင်း</button>
+              </div>
+              <div class="classify-feedback" style="width:100%; font-weight:700;"></div>
+            </div>
+
+            <div class="classify-row" data-answer="internal" data-discovery-id="ex58_horse">
+              <div><strong>၂။ လူ နှင့် မြင်း</strong></div>
+              <div class="classify-choices">
+                <button type="button" class="choice-chip" data-choice="external">ပြင်ပသန္ဓေအောင်ခြင်း</button>
+                <button type="button" class="choice-chip" data-choice="internal">အတွင်းသန္ဓေအောင်ခြင်း</button>
+              </div>
+              <div class="classify-feedback" style="width:100%; font-weight:700;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating Bottom Dock -->
+    <div class="bottom-dock-wrap">
+      <nav class="bottom-dock" aria-label="ကျွန်းများပြောင်းရန်">
+        <a href="./map.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🗺️</span><span>မြေပုံ</span>
+        </a>
+        <a href="./living-things.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🧬</span><span>၆-၁ သက်ရှိများ</span>
+        </a>
+        <a href="./plants.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🌺</span><span>၆-၂ အပင်များ</span>
+        </a>
+        <a href="./animals.html" class="dock-item is-active" aria-current="page">
+          <span class="dock-icon" aria-hidden="true">🐸</span><span>၆-၃ သတ္တဝါများ</span>
+        </a>
+        <a href="./review.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🧠</span><span>သုံးသပ်ချက်</span>
+        </a>
+        <a href="./games.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🎮</span><span>ဂိမ်းများ</span>
+        </a>
+        <a href="./quiz.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🏆</span><span>ဉာဏ်စမ်း</span>
+        </a>
+      </nav>
+    </div>
+
+    <script defer src="./app.js"></script>
+  </body>
+</html>

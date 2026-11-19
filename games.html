@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>သိပ္ပံလေ့ကျင့်ခန်း ဂိမ်းကစားကွင်း — အခန်း (၆)</title>
+    <meta
+      name="description"
+      content="Grade 6 Science Chapter 6 interactive exercise games: Speed Sort Classifier, Memory Match Pairs, and Life Cycle Sequencer."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="games">
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+    <!-- Floating Corner HUD -->
+    <div class="hud-overlay">
+      <div class="hud-inner">
+        <div class="hud-group">
+          <a href="./map.html" class="hud-badge">← ပင်မမြေပုံ</a>
+          <div class="hud-badge">ကျွန်း (၆) · လေ့ကျင့်ခန်းဂိမ်း ၃ မျိုး</div>
+        </div>
+        <div class="hud-group">
+          <div class="hud-badge hud-badge--stars">
+            <span aria-hidden="true">⭐</span>
+            <span id="hud-star-count" class="hud-star-count">0</span>
+            <span>ကြယ်</span>
+          </div>
+          <button type="button" id="hud-sound-toggle" class="hud-badge hud-badge--sound" aria-pressed="false">
+            <span class="sound-icon" aria-hidden="true">🔊</span>
+            <span class="sound-label">အသံဖွင့်</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main class="page-shell">
+      <section class="hero-card">
+        <span class="chapter-tag">ကျွန်း (၆) · အပြန်အလှန်ကစားနိုင်သော လေ့ကျင့်ခန်း ဂိမ်း (၃) မျိုး</span>
+        <h1>
+          သိပ္ပံလေ့ကျင့်ခန်း ဂိမ်းကစားကွင်း
+          <span class="en-sub">Interactive Science Exercise Games</span>
+        </h1>
+        <p class="hero-lead">
+          အခန်း (၆) မျိုးပွားခြင်း သင်ခန်းစာများကို ပျော်ရွှင်စွာ လေ့ကျင့်မှတ်မိစေရန် အောက်ပါဂိမ်း (၃) မျိုးကို ကစားပြီး ကြယ်ဆုများ စုဆောင်းလိုက်ပါ။
+        </p>
+      </section>
+
+      <section class="section-block" aria-label="ဂိမ်းရွေးချယ်ရန်">
+        <div class="games-tab-bar" role="tablist">
+          <button type="button" class="game-tab-btn is-active" data-game-tab="sort" role="tab" aria-selected="true">
+            <span class="game-tab-icon" aria-hidden="true">🎯</span>
+            <span>
+              ဂိမ်း (၁) မျိုးပွားနည်း အမြန်ခွဲခြားဂိမ်း
+              <span class="game-tab-sub">သက်ရှိ ၁၀ မျိုးကို အုပ်စုမှန်အောင် ခွဲခြားမည်</span>
+            </span>
+          </button>
+          <button type="button" class="game-tab-btn" data-game-tab="memory" role="tab" aria-selected="false">
+            <span class="game-tab-icon" aria-hidden="true">🧩</span>
+            <span>
+              ဂိမ်း (၂) သိပ္ပံအတွဲညှိ ကတ်မှတ်ဉာဏ်ဂိမ်း
+              <span class="game-tab-sub">သက်ရှိနှင့် မျိုးပွားနည်းအတွဲများ ရှာဖွေမည်</span>
+            </span>
+          </button>
+          <button type="button" class="game-tab-btn" data-game-tab="sequence" role="tab" aria-selected="false">
+            <span class="game-tab-icon" aria-hidden="true">🌱</span>
+            <span>
+              ဂိမ်း (၃) ဘဝစက်ဝန်း အစီအစဉ်စီဂိမ်း
+              <span class="game-tab-sub">ပန်းပွင့်၊ ဖားနှင့် လူ သန္ဓေအောင်ပုံ အဆင့်စီမည်</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Game 1 Panel -->
+        <div id="game-panel-sort" class="game-panel quiz-card">
+          <div id="game-sort-root" aria-live="polite"></div>
+        </div>
+
+        <!-- Game 2 Panel -->
+        <div id="game-panel-memory" class="game-panel quiz-card" hidden>
+          <div id="game-memory-root" aria-live="polite"></div>
+        </div>
+
+        <!-- Game 3 Panel -->
+        <div id="game-panel-sequence" class="game-panel quiz-card" hidden>
+          <div id="game-sequence-root" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating Bottom Dock -->
+    <div class="bottom-dock-wrap">
+      <nav class="bottom-dock" aria-label="ကျွန်းများပြောင်းရန်">
+        <a href="./map.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🗺️</span><span>မြေပုံ</span>
+        </a>
+        <a href="./living-things.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🧬</span><span>၆-၁ သက်ရှိများ</span>
+        </a>
+        <a href="./plants.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🌺</span><span>၆-၂ အပင်များ</span>
+        </a>
+        <a href="./animals.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🐸</span><span>၆-၃ သတ္တဝါများ</span>
+        </a>
+        <a href="./review.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🧠</span><span>သုံးသပ်ချက်</span>
+        </a>
+        <a href="./games.html" class="dock-item is-active" aria-current="page">
+          <span class="dock-icon" aria-hidden="true">🎮</span><span>ဂိမ်းများ</span>
+        </a>
+        <a href="./quiz.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🏆</span><span>ဉာဏ်စမ်း</span>
+        </a>
+      </nav>
+    </div>
+
+    <script defer src="./app.js"></script>
+  </body>
+</html>

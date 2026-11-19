@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>ဉာဏ်စမ်းပြိုင်ပွဲကွင်း — အခန်း (၆)</title>
+    <meta name="description" content="Grade 6 Science Chapter 6 interactive 12-question Quiz Arena with multiple modes, sound effects, and confetti celebration." />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="quiz">
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+    <!-- Floating Corner HUD -->
+    <div class="hud-overlay">
+      <div class="hud-inner">
+        <div class="hud-group">
+          <a href="./map.html" class="hud-badge">← ပင်မမြေပုံ</a>
+          <div class="hud-badge">ကျွန်း (၅) · ဉာဏ်စမ်းပြိုင်ပွဲ (၁၂ ပုဒ်)</div>
+        </div>
+        <div class="hud-group">
+          <div class="hud-badge hud-badge--stars">
+            <span aria-hidden="true">⭐</span>
+            <span id="hud-star-count" class="hud-star-count">0</span>
+            <span>ကြယ်</span>
+          </div>
+          <button type="button" id="hud-sound-toggle" class="hud-badge hud-badge--sound" aria-pressed="false">
+            <span class="sound-icon" aria-hidden="true">🔊</span>
+            <span class="sound-label">အသံဖွင့်</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main class="page-shell">
+      <section class="hero-card quiz-shell">
+        <span class="chapter-tag">အခန်း (၆) အကဲဖြတ်စစ်ဆေးခြင်း · မေးခွန်း ၁၂ ခု</span>
+        <h1>
+          မျိုးပွားခြင်း ဉာဏ်စမ်းပြိုင်ပွဲကွင်း
+          <span class="en-sub">Chapter 6 Quiz Arena</span>
+        </h1>
+        <p class="hero-lead">
+          သက်ရှိများ၊ အပင်များနှင့် သတ္တဝါများ မျိုးပွားခြင်းဆိုင်ရာ မေးခွန်းဘဏ် (၁၂) ခုမှ
+          မိမိနှစ်သက်ရာ မုဒ်ကိုရွေးချယ်ဖြေဆိုပြီး အပိုဆောင်း ကြယ်များ ရယူလိုက်ပါ။
+        </p>
+      </section>
+
+      <section class="section-block quiz-shell">
+        <div class="quiz-mode-bar" role="group" aria-label="ဉာဏ်စမ်းမုဒ်ရွေးချယ်ရန်">
+          <button type="button" class="quiz-mode-btn is-active" data-quiz-mode="full12">
+            အခန်းပြည့် စိန်ခေါ်မှု (၁၂ ပုဒ်)
+          </button>
+          <button type="button" class="quiz-mode-btn" data-quiz-mode="medium8">
+            စစ်ဆေးရေး စိန်ခေါ်မှု (၈ ပုဒ် ကျပန်း)
+          </button>
+          <button type="button" class="quiz-mode-btn" data-quiz-mode="quick5">
+            အမြန်ဉာဏ်စမ်း (၅ ပုဒ် ကျပန်း)
+          </button>
+        </div>
+        <div id="quiz-arena" class="quiz-card" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <!-- Floating Bottom Dock -->
+    <div class="bottom-dock-wrap">
+      <nav class="bottom-dock" aria-label="ကျွန်းများပြောင်းရန်">
+        <a href="./map.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🗺️</span><span>မြေပုံ</span>
+        </a>
+        <a href="./living-things.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🧬</span><span>၆-၁ သက်ရှိများ</span>
+        </a>
+        <a href="./plants.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🌺</span><span>၆-၂ အပင်များ</span>
+        </a>
+        <a href="./animals.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🐸</span><span>၆-၃ သတ္တဝါများ</span>
+        </a>
+        <a href="./review.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🧠</span><span>သုံးသပ်ချက်</span>
+        </a>
+        <a href="./games.html" class="dock-item">
+          <span class="dock-icon" aria-hidden="true">🎮</span><span>ဂိမ်းများ</span>
+        </a>
+        <a href="./quiz.html" class="dock-item is-active" aria-current="page">
+          <span class="dock-icon" aria-hidden="true">🏆</span><span>ဉာဏ်စမ်း</span>
+        </a>
+      </nav>
+    </div>
+
+    <script defer src="./app.js"></script>
+  </body>
+</html>

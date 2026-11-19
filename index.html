@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>ကြိုဆိုပါ၏ — အခန်း (၆) မျိုးပွားခြင်း သိပ္ပံစွန့်စားခန်း</title>
+    <meta
+      name="description"
+      content="Welcome to the Grade 6 Science Chapter 6 Reproduction Adventure — explore 6 interactive islands, science labs, 3 exercise games, and the 12-question quiz arena."
+    />
+    <meta property="og:title" content="အခန်း (၆) မျိုးပွားခြင်း — သိပ္ပံစွန့်စားခန်း" />
+    <meta
+      property="og:description"
+      content="Welcome to the Grade 6 Science Chapter 6 Reproduction Adventure — explore 6 interactive islands, science labs, 3 exercise games, and the 12-question quiz arena."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="welcome" class="welcome-page">
+    <main class="welcome-shell">
+      <section class="welcome-adv-card" aria-labelledby="welcome-title">
+        <!-- Scenic Vector Adventure Archipelago Artwork -->
+        <div class="welcome-art-col">
+          <svg
+            class="welcome-adv-svg"
+            viewBox="0 0 520 420"
+            role="img"
+            aria-label="သိပ္ပံစွန့်စားခန်း ကျွန်းစုနှင့် ရွက်လှေသရုပ်ဖော်ပုံ"
+          >
+            <defs>
+              <linearGradient id="advSky" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#CBEFFF" />
+                <stop offset="60%" stop-color="#E7FAFF" />
+                <stop offset="100%" stop-color="#FFF5D6" />
+              </linearGradient>
+              <linearGradient id="advSea" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#19A5D1" />
+                <stop offset="100%" stop-color="#0B7BA3" />
+              </linearGradient>
+              <linearGradient id="advSun" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE680" />
+                <stop offset="100%" stop-color="#FFB703" />
+              </linearGradient>
+            </defs>
+
+            <!-- Sky -->
+            <rect width="520" height="420" rx="20" fill="url(#advSky)" />
+
+            <!-- Warm Sun -->
+            <circle cx="415" cy="92" r="46" fill="url(#advSun)" opacity="0.95" />
+            <circle cx="415" cy="92" r="62" fill="#FFD166" opacity="0.25" />
+
+            <!-- Soft Floating Clouds -->
+            <g class="adv-cloud" fill="#FFFFFF" opacity="0.9">
+              <ellipse cx="115" cy="82" rx="38" ry="16" />
+              <ellipse cx="140" cy="76" rx="28" ry="18" />
+              <ellipse cx="92" cy="86" rx="24" ry="13" />
+            </g>
+            <g class="adv-cloud-slow" fill="#FFFFFF" opacity="0.85">
+              <ellipse cx="300" cy="118" rx="32" ry="13" />
+              <ellipse cx="320" cy="112" rx="22" ry="14" />
+            </g>
+
+            <!-- Distant Mountain Island -->
+            <path d="M 35 268 Q 95 170 165 268 Z" fill="#82D8C2" />
+            <path d="M 105 268 Q 165 190 225 268 Z" fill="#5CC4AC" />
+
+            <!-- Ocean Surface -->
+            <rect x="0" y="258" width="520" height="162" rx="0" fill="url(#advSea)" />
+            <path d="M 0 262 Q 65 248 130 262 T 260 262 T 390 262 T 520 262 L 520 284 L 0 284 Z" fill="#2BB8E0" opacity="0.55" />
+
+            <!-- Main Treasure Science Island -->
+            <ellipse cx="340" cy="306" rx="145" ry="44" fill="#F8D47A" />
+            <ellipse cx="340" cy="296" rx="124" ry="30" fill="#FFE8A8" />
+            <!-- Palm & Leaf Silhouette -->
+            <path d="M 375 288 Q 390 232 414 198" fill="none" stroke="#8C5A2B" stroke-width="8" stroke-linecap="round" />
+            <path d="M 414 198 Q 375 186 355 212 Q 388 205 414 198 Z" fill="#06D6A0" />
+            <path d="M 414 198 Q 445 174 472 200 Q 440 202 414 198 Z" fill="#049A73" />
+            <path d="M 414 198 Q 438 220 458 242 Q 426 226 414 198 Z" fill="#06D6A0" />
+            <!-- Island Landmarks -->
+            <circle cx="290" cy="285" r="24" fill="#FFFFFF" stroke="#06D6A0" stroke-width="3" />
+            <text x="290" y="293" text-anchor="middle" font-size="24">🌺</text>
+            <circle cx="348" cy="276" r="24" fill="#FFFFFF" stroke="#FF6B6B" stroke-width="3" />
+            <text x="348" y="284" text-anchor="middle" font-size="23">🐸</text>
+            <circle cx="408" cy="290" r="22" fill="#FFFFFF" stroke="#118AB2" stroke-width="3" />
+            <text x="408" y="298" text-anchor="middle" font-size="21">🧬</text>
+
+            <!-- Explorer Sailboat -->
+            <g class="adv-boat">
+              <path d="M 75 322 L 195 322 L 175 352 L 95 352 Z" fill="#1D3557" />
+              <path d="M 88 328 L 182 328" stroke="#FFD166" stroke-width="4" stroke-linecap="round" />
+              <line x1="135" y1="226" x2="135" y2="322" stroke="#1D3557" stroke-width="5" stroke-linecap="round" />
+              <path d="M 138 232 L 194 310 L 138 310 Z" fill="#FFFFFF" stroke="#D7E3F0" stroke-width="2" />
+              <path d="M 132 246 L 88 308 L 132 308 Z" fill="#FF6B6B" />
+            </g>
+
+            <!-- Animated Compass Rose Badge -->
+            <g transform="translate(88 94)">
+              <circle cx="0" cy="0" r="36" fill="#FFFFFF" stroke="#1D3557" stroke-width="3" />
+              <circle cx="0" cy="0" r="29" fill="#EDF4FA" />
+              <polygon points="0,-24 6,-4 0,0 -6,-4" fill="#FF6B6B" />
+              <polygon points="0,24 6,4 0,0 -6,4" fill="#118AB2" />
+              <polygon points="24,0 4,6 0,0 4,-6" fill="#1D3557" opacity="0.45" />
+              <polygon points="-24,0 -4,6 0,0 -4,-6" fill="#1D3557" opacity="0.45" />
+              <circle cx="0" cy="0" r="4" fill="#1D3557" />
+            </g>
+
+            <!-- Ocean Waves Foreground -->
+            <path d="M 35 375 Q 75 362 115 375 T 195 375 T 275 375" fill="none" stroke="#9EE6FA" stroke-width="4" stroke-linecap="round" />
+            <path d="M 270 395 Q 315 382 360 395 T 450 395" fill="none" stroke="#9EE6FA" stroke-width="4" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <!-- Adventure Expedition Welcome Copy & Single Primary Entry -->
+        <div class="welcome-info-col">
+          <div class="welcome-kicker">
+            ဆဋ္ဌမတန်း သိပ္ပံ · အခန်း (၆) · <span class="en-term">ICT Show Adventure</span>
+          </div>
+
+          <h1 id="welcome-title" class="welcome-main-title">
+            သိပ္ပံစွန့်စားခန်း ကျွန်းစုခရီးစဉ်
+            <span class="welcome-sub-title">အခန်း (၆) မျိုးပွားခြင်း <span class="en-inline-muted">(Reproduction)</span></span>
+          </h1>
+
+          <p class="hero-lead">
+            သက်ရှိများ၊ ပန်းပွင့်အပင်များနှင့် သတ္တဝါများ မည်သို့မျိုးပွားကြသည်ကို
+            စွန့်စားခန်းကျွန်း (၆) ကျွန်းသို့ ရွက်လွှင့်စူးစမ်းလေ့လာရန် ကြိုဆိုပါ၏။
+          </p>
+
+          <ul class="welcome-highlights">
+            <li class="welcome-step">
+              <span class="welcome-step-num">01</span>
+              <div class="welcome-step-body">
+                <span class="welcome-step-title">ကျွန်း (၁–၃) · သင်ခန်းစာနှင့် ဓာတ်ခွဲခန်းများ</span>
+                <span class="welcome-step-desc">သက်ရှိများ၊ ပန်းပွင့်ဓာတ်ခွဲခန်းနှင့် သန္ဓေအောင်ခြင်း စမ်းသပ်ခန်း</span>
+              </div>
+            </li>
+            <li class="welcome-step">
+              <span class="welcome-step-num">02</span>
+              <div class="welcome-step-body">
+                <span class="welcome-step-title">ကျွန်း (၄–၅) · သုံးသပ်ချက်နှင့် ဉာဏ်စမ်းပြိုင်ပွဲ</span>
+                <span class="welcome-step-desc">အခန်းသုံးသပ်ချက် Concept Map နှင့် မေးခွန်း (၁၂) ခု စစ်ဆေးမှု</span>
+              </div>
+            </li>
+            <li class="welcome-step">
+              <span class="welcome-step-num">03</span>
+              <div class="welcome-step-body">
+                <span class="welcome-step-title">ကျွန်း (၆) · လေ့ကျင့်ခန်း ဂိမ်း (၃) မျိုး</span>
+                <span class="welcome-step-desc">အမြန်ခွဲခြားဂိမ်း၊ မှတ်ဉာဏ်အတွဲညှိဂိမ်းနှင့် ဘဝစက်ဝန်းစီဂိမ်း</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="welcome-actions">
+            <a href="./map.html" class="btn btn-adventure-start welcome-enter-btn">
+              စွန့်စားခန်း မြေပုံစတင်မည် <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script defer src="./app.js"></script>
+  </body>
+</html>
